@@ -1,4 +1,121 @@
+/* COLOR PALETTE 
+Gray: #DAD7CD
+Light green: #A3B18A
+Medium green: #588157
+Dark green: #3A5A40
+Darkest green: #344E41
+*/
+
+/* GLOBAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    color: #DAD7CD;
+    background-color: #344E41;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Unbounded', cursive;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #A3B18A;
+    margin-block-start: 0;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+a:link {
+    color: #A3B18A;
+}
+
+a:visited {
+    color: #344E41;
+}
+
+a:hover {
+    color: #DAD7CD;
+}
+
+b {
+    font-weight: 700;
+}
+
+/* HOMEPAGE */
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10%;
+}
+
+.imagecontainer {
+    flex: 40%;
+    /* background-color: #A3B18A; */
+    padding: 20px;
+}
+
+.textcontainer {
+    flex: 60%;
+    /* background-color: #3a5a40; */
+    padding: 20px;
+}
+
+/* HOMEPAGE SVG */
+
+#mainimage {
+    width: 100%;
+    padding: 0;
+}
+
+.fillbackground {
+    fill: #344E41;
+    stroke: none;
+}
+
+.filldarkest {
+    fill: #3a5a40;
+    stroke: none;
+}
+
+.filldark {
+    fill: #588157;
+    stroke: none;
+}
+
+.fillmed {
+    fill: #A3B18A;
+    stroke: none;
+}
+
+.fillgray {
+    fill: #DAD7CD;
+    stroke: none;
+}
+
+.strokedarkest {
+    fill: none;
+    stroke: #588157;
+    stroke-width: 5;
 }

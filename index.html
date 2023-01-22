@@ -8,16 +8,48 @@
         <!-- Font link -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&family=Unbounded:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,300;1,600;1,800&family=Unbounded:wght@400;800&display=swap" rel="stylesheet">
         <!-- CSS link -->
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <p>HELLO</p>
-        <svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <rect x="40" y="40" width="50" height="60" stroke="black" fill="transparent" stroke-width="4"></rect>
+        <div id="content">
+        
+        <div class="imagecontainer">
+            <svg id="mainimage" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 200 300">
+            <circle class="strokedarkest" cx="100" cy="30" r="25"></circle>
+            <rect class="fillgray" x="40" y="25" width="5" height="50"></rect>
+            <rect class="filldark" x="55" y="10" width="5" height="50"></rect>
+            <rect class="filldarkest" x="25" y="140" width="10" height="10"></rect>
+            <rect class="filldarkest" x="40" y="150" width="10" height="10"></rect>
+            <polygon class="fillmed" points="25,50 75,75 150,50 100,25"></polygon>
+            <polygon class="filldark" points="75,75 75,150 150,123 150,50"></polygon>
+            <polygon class="filldarkest" points="75,75 75,150 25,120 25,50"></polygon>
+            <rect class="filldarkest" x="0" y="85" width="10" height="10"></rect>
+            <rect class="filldark" x="15" y="85" width="10" height="10"></rect>
+            <rect class="fillmed" x="30" y="85" width="10" height="10"></rect>
+            <rect class="fillgray" x="45" y="85" width="10" height="10"></rect>
+            <circle class="fillmed" cx="150" cy="150" r="50"></circle>
+            <circle class="fillbackground" cx="150" cy="150" r="25"></circle>
+            <rect class="filldark" x="0" y="170" width="125" height="5"></rect>
+            <rect class="fillgray" x="0" y="185" width="155" height="5"></rect>
         </svg>
+        </div> <!-- image -->
+
+        <div class="textcontainer">
+            <div>
+                <h2>Morgan Gelfand</h2>
+                <h1>Visual Technologies 2</h1>
+            </div>
+
+            <div>
+                <h3>Homework Archive</h3>
+                <p><b>Visualizing Through Sketching &#183;</b> Jan 25, 2023<br>Sketches of visualization ideas for the US population in 1900 vs. 2000<br><a href="homework1.html">View the sketches here</a></p>
+            </div>
+        </div> <!--text-->
+
+        </div> <!--content-->
     </body>
 
 </html>
