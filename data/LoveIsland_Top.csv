@@ -1,0 +1,65 @@
+name,season,gender,age,race,hometown,uk_region,profession,day_entered,day_left,days_in_villa,percent_time,couples_num,outcome,still_together,insta_followers
+Jess Hayes,1,female,22,white,"Gloucester, England",Southwest,Model,1,40,40,100.00%,4,winner,FALSE,366000
+Max Morley,1,male,22,white,"Yorkshire, England",Yorkshire and the Humber,Professional sports,14,40,27,67.50%,1,winner,FALSE,210000
+Hannah Elizabeth,1,female,25,white,"Liverpool, England",Northwest,Model,1,40,40,100.00%,1,second,FALSE,418000
+Jon Clark,1,male,25,white,"Sawbridgeworth, England",East of England,Tradesperson,1,40,40,100.00%,1,second,FALSE,445000
+Lauren Richardson,1,female,26,white,"Walthamstow, England",London,Nonprofit,2,40,39,97.50%,3,third,FALSE,81200
+Josh Ritchie,1,male,20,white,"Bolton, England",Northwest,Tradesperson,1,40,40,100.00%,3,third,FALSE,779000
+Cally Jane Beech,1,female,23,white,"Hull, England",Yorkshire and the Humber,Medical field,21,40,20,50.00%,1,fourth,FALSE,553000
+Luis Morrison,1,male,20,multiracial,"Crystal Palace, England",London,Professional sports,1,40,40,100.00%,4,fourth,FALSE,331000
+Cara De La Hoyde,2,female,26,white,"Kent, England",Southeast,Entertainer,1,45,45,100.00%,1,winner,TRUE,1100000
+Kady McDermott,2,female,20,white,"Stevenage, England",East of England,Cosmetologist,3,45,42,93.33%,1,third,FALSE,1200000
+Nathan Massey,2,male,25,white,"Essex, England",East of England,Tradesperson,1,45,45,100.00%,1,winner,TRUE,792000
+Alex Bowen,2,male,24,white,"Birmingham, England",West Midlands,Tradesperson,18,45,27,60.00%,1,second,TRUE,1600000
+Olivia Buckland,2,female,22,white,"Essex, England",East of England,Corporate,1,45,45,100.00%,4,second,TRUE,3000000
+Scott Thomas,2,male,28,multiracial,"Manchester, England",Northwest,Events,1,45,45,100.00%,2,third,FALSE,996000
+Adam Maxted,2,male,24,white,"Belfast, Ireland",Northern Ireland,Fitness,11,45,34,75.56%,5,fourth,FALSE,160000
+Katie Salmon,2,female,20,white,"Liverpool, England",Northwest,Model,34,45,11,24.44%,2,fourth,FALSE,265000
+Amber Davies,3,female,20,white,"North Wales, Wales",Wales,Entertainer,1,52,52,100.00%,4,winner,FALSE,1400000
+Kem Cetinay,3,male,21,white,"Essex, England",East of England,Cosmetologist,1,52,52,100.00%,4,winner,FALSE,2700000
+Camilla Thurlow,3,female,27,white,"Dumfries, Scotland",Scotland,Nonprofit,1,52,52,100.00%,4,second,TRUE,1500000
+Jamie Jewett,3,male,27,white,"Essex, England",East of England,Model,32,52,20,38.46%,1,second,TRUE,806000
+Chris Hughes,3,male,24,white,"Cheltenham, England",Southwest,Model,4,52,48,92.31%,2,third,FALSE,2200000
+Olivia Attwood,3,female,26,white,"Surrey, England",Southeast,Model,1,52,52,100.00%,4,third,FALSE,1900000
+Gabby Allen,3,female,25,white,"Liverpool, England",Northwest,Entertainer,7,52,45,86.54%,1,fourth,FALSE,1100000
+Marcel Somerville,3,male,31,black,"London, England",London,Entertainer,1,52,52,100.00%,3,fourth,FALSE,610000
+Dani Dyer,4,female,21,white,"East London, England",London,Foodservice,1,59,59,100.00%,1,winner,FALSE,3600000
+Jack Fincham,4,male,26,white,"Kent, England",Southeast,Sales,1,59,59,100.00%,1,winner,FALSE,1800000
+Laura Anderson,4,female,29,white,"Stirling, Scotland",Scotland,Transportation,1,59,59,100.00%,3,second,FALSE,1400000
+Paul Knops,4,male,31,white,"Bournemouth, England",Southwest,Model,43,59,16,27.12%,1,second,FALSE,359000
+Josh Denzel,4,male,26,black,"London, England",London,Media,8,59,51,86.44%,2,third,FALSE,1200000
+Kaz Crossley,4,female,23,asian,"London, England",London,Model,26,59,33,55.93%,1,third,FALSE,1200000
+Megan Barton Hanson,4,female,24,white,"Essex, England",East of England,Model,8,59,51,86.44%,3,fourth,FALSE,1600000
+Wes Nelson,4,male,20,black,"Staffordshire, England",West Midlands,Sciences,1,59,59,100.00%,2,fourth,FALSE,1500000
+Amber Gill,5,female,21,multiracial,"Newcastle, England",Northeast,Cosmetologist,1,58,58,100.00%,5,winner,FALSE,2600000
+Greg O'Shea,5,male,24,white,"Limerick, Ireland",Ireland,Professional sports,43,58,15,25.86%,1,winner,FALSE,930000
+Molly-Mae Hague,5,female,20,white,"Manchester, England",Northwest,Influencer,4,58,54,93.10%,1,second,TRUE,6400000
+Tommy Fury,5,male,20,white,"Manchester, England",Northwest,Professional sports,1,58,58,100.00%,2,second,TRUE,4200000
+India Reynolds,5,female,28,white,"Reading, England",Southeast,Model,43,58,15,25.86%,1,third,FALSE,960000
+Ovie Soko,5,male,28,black,"London, England",London,Professional sports,26,58,32,55.17%,3,third,FALSE,1700000
+Curtis Pritchard,5,male,23,white,"Shropshire, England",West Midlands,Entertainer,1,58,58,100.00%,3,fourth,FALSE,1200000
+Maura Higgins,5,female,28,white,"Country Longford, Ireland",Ireland,Model,10,58,48,82.76%,4,fourth,FALSE,3500000
+Finley Tapp,6,male,20,white,"Milton Keynes, England",Southeast,Professional sports,5,43,38,88.37%,1,winner,TRUE,1200000
+Paige Turley,6,female,22,white,"West Lothian, Scotland",Scotland,Entertainer,1,43,43,100.00%,2,winner,TRUE,1700000
+Luke Trotman,6,male,22,black,"Luton, England",East of England,Tradesperson,12,43,31,72.09%,2,second,FALSE,1200000
+Siânnise Fudge,6,female,25,white,"Bristol, England",Southwest,Cosmetologist,1,43,43,100.00%,3,second,FALSE,1600000
+Demi Jones,6,female,21,white,"Portsmouth, England",Southeast,Fashion,16,43,27,62.79%,2,third,FALSE,1200000
+Luke Mabbott,6,male,24,white,"Redcar, England",Northeast,Tradesperson,12,43,31,72.09%,3,third,FALSE,1000000
+Ched Uzor,6,male,23,black,"Suffolk, England",East of England,Tradesperson,21,43,22,51.16%,1,fourth,FALSE,289000
+Jess Gale,6,female,20,white,"Cambridge, England",East of England,Student,1,43,43,100.00%,4,fourth,FALSE,961000
+Liam Reardon,7,male,21,white,"Merthyr Tydfil, Wales",Wales,Tradesperson,4,58,54,93.10%,2,winner,TRUE,1000000
+Millie Court,7,female,24,white,"Essex, England",East of England,Fashion,9,58,49,84.48%,1,winner,TRUE,2000000
+Chloe Burrows,7,female,25,white,"Bicester, England",Southeast,Corporate,1,58,58,100.00%,4,second,TRUE,1600000
+Toby Aromolaran,7,male,22,black,"Essex, England",East of England,Professional sports,1,58,58,100.00%,4,second,TRUE,959000
+Faye Winter,7,female,26,white,"Devon, England",Southwest,Real Estate,1,58,58,100.00%,4,third,TRUE,1200000
+Teddy Soares,7,male,27,black,"Manchester, England",Northwest,Corporate,12,58,46,79.31%,1,third,TRUE,1000000
+Kaz Kamwi,7,female,26,black,"Essex, England",East of England,Fashion,1,58,58,100.00%,4,fourth,FALSE,791000
+Tyler Cruickshank,7,male,26,black,"Croydon, England",London,Real Estate,23,58,35,60.34%,2,fourth,FALSE,198000
+Davide Sanclimenti,8,male,27,white,"Manchester, England",Northwest,Sales,1,58,57,100.00%,3,winner,TRUE,1900000
+Ekin-Su Cülcüloglu,8,female,27,arab,"Essex, England",East of England,Entertainer,3,58,55,96.49%,3,winner,TRUE,3200000
+Gemma Owen,8,female,19,white,"Chester, England",Northwest,Professional sports,1,58,57,100.00%,3,second,FALSE,2000000
+Luca Bish,8,male,23,white,"Brighton, England",Southeast,Foodservice,1,58,57,100.00%,3,second,FASLE,1400000
+Dami Hope,8,male,26,black,"Dublin, Ireland",Ireland,Sciences,1,58,57,100.00%,3,third,TRUE,771000
+Indiyah Polack,8,female,24,black,"London, England",London,Model,1,58,57,100.00%,3,third,TRUE,1000000
+Andrew Le Page,8,male,27,white,"Guernsey, British Isles",Commonwealth,Real Estate,1,58,57,100.00%,2,fourth,TRUE,826000
+Tasha Ghouri,8,female,24,white,"Thirsk, England",Yorkshire and the Humber,Entertainer,1,58,57,100.00%,2,fourth,TRUE,1500000
