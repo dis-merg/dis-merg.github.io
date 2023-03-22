@@ -156,7 +156,8 @@ d3.select("#femaleAgeRace").on("click", function() {
 
 });
 
-/////////////// RACE CHART
+
+    /////////////// RACE CHART
 
 d3.csv("./data/LoveIsland_Race.csv").then(function(data) {
 
@@ -313,3 +314,88 @@ d3.csv("./data/LoveIsland_Race.csv").then(function(data) {
     });
     
     });
+
+
+    
+////////////// PIE CHART
+// const racesvg = d3.select("#raceChart");
+
+// //SET VALUES
+// const raceWidth = document.querySelector("#raceChart").clientWidth;
+// const raceHeight = document.querySelector("#raceChart").clientHeight;
+// const radius = raceWidth/2.5;
+
+// // CANVAS
+// let g = racesvg.append("g")
+//                 .attr("transform", "translate(" + raceWidth / 2 + "," + raceHeight / 2 + ")");
+
+                
+// // DATA
+// let femalePie = [{name: "White", share: 87}, 
+//             {name: "Black", share: 6.5},
+//             {name: "Mixed", share: 3.25},
+//             {name: "Asian", share: 3.25}];
+
+// let malePie = [{name: "White", share: 64.5}, 
+//             {name: "Black", share: 29},
+//             {name: "Mixed", share: 6.5}];
+
+// // MAKE PIE CHART
+// let pie = d3.pie()
+//             .value(function(d) { 
+//                 return d.share; 
+//             })
+//             .padAngle(.05);
+
+// let arc = g.selectAll("arc")
+//             .data(pie(femalePie))
+//             .enter();
+
+// let arcGen = d3.arc()
+//             .outerRadius(radius)
+//             .innerRadius(radius/2);
+
+// arc.append("path")
+//     .attr("d", arcGen)
+//     .attr("fill", "#FF0054");
+
+
+// // LABELS
+// arc.append("text")
+//     .text(function(d) {
+//         return d.data.name; 
+//     })
+//     .attr("transform", function(d){
+//         return "translate(" + arcGen.centroid(d) + ")";
+//     })
+//     .style("fill", "white");
+
+// //BUTTON CLICK
+
+//     d3.select("#maleAgeRace").on("click", function() {
+
+//         let arcGen = d3.arc()
+//             .outerRadius(radius)
+//             .innerRadius(radius/2);
+
+//         let a = g.selectAll("arc")
+//         .data(malePie, function(d) { return d.share; });
+    
+//         a.enter().append("path")
+//         .attr("d", arcGen)
+//         .attr("fill", "#FF0054")
+//         .attr("opacity", 0)
+//         .merge(a)   
+//             .transition() 
+//             .duration(1500)
+//             .attr("d", arcGen)
+//             .attr("fill", "#FF0054")
+//             .attr("opacity", 1);
+    
+//         a.exit()
+//             .transition()
+//             .duration(1500)
+//             .attr("opacity",0)
+//             .remove();
+    
+//     });
