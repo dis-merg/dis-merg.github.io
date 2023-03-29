@@ -113,6 +113,11 @@ button:hover {
     color: white;
 }
 
+.nobuttons {
+    display: block;
+    flex: 100%;
+}
+
 .axisLabel {
     fill: white;
 }
@@ -135,3 +140,7 @@ button:hover {
     position: relative;
 }
 
+.flourish-map {
+    margin: 0px;
+    flex: 30%;
+}
