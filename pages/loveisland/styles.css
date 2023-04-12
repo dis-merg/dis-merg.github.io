@@ -36,15 +36,15 @@ body {
     /* height: 20em;
     height: 100vh; */
     scroll-snap-align: start;
-    padding: 7%;
+    padding: 5% 10% 5% 10%;
 }
 
 .text {
-    flex: 40%;
+    flex: 50%;
 }
 
 .vis {
-    flex: 60%;
+    flex: 50%;
 }
 
 #landing{
@@ -122,6 +122,15 @@ button:hover {
     color: white;
 }
 
+.jobSelect {
+    display: inline-block;
+}
+
+.jobSelect :first-child {
+    background-color: #FF0054;
+    color: white;
+}
+
 .nobuttons {
     display: block;
     flex: 100%;
@@ -149,7 +158,15 @@ button:hover {
     position: relative;
 } */
 
+#jobChart {
+    width: 100%;
+}
+
 .flourish-map {
     margin: 0px;
-    flex: 30%;
+    flex: 50%;
+}
+
+.jobaxisLabel {
+    fill: white;
 }

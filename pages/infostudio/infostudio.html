@@ -1,0 +1,197 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Opioid Dispensing vs. Overdose Deaths</title>
+        <!--Font link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
+            rel="stylesheet">
+
+        <!--CSS link-->
+        <link rel="stylesheet" href="./infostyles.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+    </head> 
+
+    <body>
+        <div id="content">
+
+            <div id="title">
+                <h1>Opioid Dispensing and Overdose Death Rates</h1>
+                <h2>US Counties, 2006-2020</h2>
+            </div> <!-- title -->
+
+            <div class="story">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec auctor neque, in pharetra turpis.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis velit vel est aliquam
+                    egestas. Praesent augue risus, facilisis nec feugiat ac, consectetur eu enim. Sed ac mi neque.
+                    Vestibulum et sagittis metus. Curabitur varius mattis nibh porttitor vestibulum. Sed erat tortor,
+                    auctor eget bibendum ut, venenatis sed felis. Vestibulum scelerisque felis id pharetra accumsan.</p>
+
+                <div class="statBlock">
+                    <div class="stat">
+                        <h4 style="color:#7899D4;">3.1</h4>
+                        <p class="statInfo">overdose deaths per 100,000 people in 1996.</p>
+                    </div>
+                    <div class="stat">
+                        <h4 style="color: #AA5064">23.9</h4>
+                        <p class="statInfo">overdose deaths per 100,000 people in 2020.</p>
+                    </div>
+                    <div class="stat">
+                        <h4>671%</h4>
+                        <p class="statInfo">increase in overdose deaths from 1996 to 2020.</p>
+                    </div>
+                </div>
+
+                <p>Praesent tincidunt egestas dui in feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In felis mi, varius quis pulvinar et, semper eget mi. Integer in
+                    libero feugiat, rutrum quam nec, ullamcorper tortor. Maecenas faucibus quam et molestie mollis.
+                    Nullam luctus neque a felis auctor, ut eleifend quam scelerisque. Phasellus eleifend erat sit amet
+                    egestas fringilla. Suspendisse eu cursus lectus, sit amet maximus justo. Suspendisse cursus enim vel
+                    elit tristique tincidunt. Aenean ac orci elementum, tincidunt lectus at, sollicitudin ex. Nulla
+                    dignissim sem dui, eu luctus felis egestas in. Sed at tristique risus.</p>
+                    <p>Praesent tincidunt egestas dui in feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In felis mi, varius quis pulvinar et, semper eget mi. Integer in
+                        libero feugiat, rutrum quam nec, ullamcorper tortor. Maecenas faucibus quam et molestie mollis.
+                        Nullam luctus neque a felis auctor, ut eleifend quam scelerisque. Phasellus eleifend erat sit amet
+                        egestas fringilla. Suspendisse eu cursus lectus, sit amet maximus justo. Suspendisse cursus enim vel
+                        elit tristique tincidunt. Aenean ac orci elementum, tincidunt lectus at, sollicitudin ex. Nulla
+                        dignissim sem dui, eu luctus felis egestas in. Sed at tristique risus.</p>
+            </div>
+
+            <div id="key">
+                <div class="keyItem">
+                    <h3 style="color:#7899D4;">Less dispensing, less deaths</h3>
+                    <p>These counties avoided giving out too many opioid prescriptions and subsequently avoided copious overdose deaths. <b>4 out of every 10 rural counties</b> in the US have this designation. A possible explanation for this could be that small-town doctors were less targeted by opioid medication advertising.</p>
+                </div>
+                <div class="keyItem">
+                    <h3 style="color: #917299">More dispensing, less deaths</h3>
+                    <p>This is the rarest county designation. It’s unclear why these counties managed to avoid overdose deaths given their high prescription rates, but <b>over half of these counties are rural</b>, meaning addicted persons may have moved to other counties where street drugs were more available, leading to less overdoses.</p>
+                </div>
+                <div class="keyItem">
+                    <h3 style="color: #AA5064">Less dispensing, more deaths</h3>
+                    <p>Over <b>half of the urban metros</b> in the US have this designation, and almost <b>a third of suburban metros</b>. These counties did not prescribe many opioids, but street drugs are more widely available in these populous areas, and addicted persons from smaller counties may have migrated to these areas for more access to opioids.</p>
+                </div>
+                <div class="keyItem">
+                    <h3 style="color: #DA1F2C">More dispensing, more deaths</h3>
+                    <p>This is the most numerous county designation. Unfortunately, most counties in the US fell prey to the opioid epidemic. This quadrant has a multitude of all types of counties, including <b>over half of all medium metros</b> and <b>almost half of all small metros</b>. These areas were heavily targeted by pharmaceutical salesmen in the early 2000s.</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec auctor neque, in pharetra turpis.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis velit vel est aliquam
+                    egestas. Praesent augue risus, facilisis nec feugiat ac, consectetur eu enim. Sed ac mi neque.
+                    Vestibulum et sagittis metus. Curabitur varius mattis nibh porttitor vestibulum. Sed erat tortor,
+                    auctor eget bibendum ut, venenatis sed felis. Vestibulum scelerisque felis id pharetra accumsan.</p>
+
+                <p>Praesent tincidunt egestas dui in feugiat. Orci varius natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. In felis mi, varius quis pulvinar et, semper eget mi. Integer in
+                    libero feugiat, rutrum quam nec, ullamcorper tortor. Maecenas faucibus quam et molestie mollis.
+                    Nullam luctus neque a felis auctor, ut eleifend quam scelerisque. Phasellus eleifend erat sit amet
+                    egestas fringilla. Suspendisse eu cursus lectus, sit amet maximus justo. Suspendisse cursus enim vel
+                    elit tristique tincidunt. Aenean ac orci elementum, tincidunt lectus at, sollicitudin ex. Nulla
+                    dignissim sem dui, eu luctus felis egestas in. Sed at tristique risus.</p>
+            </div>
+
+            <div id="scatterplot">
+                <div class="flourish-embed flourish-scatter" data-src="visualisation/13191666"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                <div id="scatterChart"></div>
+            </div> <!-- scatterplot -->
+
+            <div class="story">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec auctor neque, in pharetra turpis.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis velit vel est aliquam
+                    egestas. Praesent augue risus, facilisis nec feugiat ac, consectetur eu enim. Sed ac mi neque.
+                    Vestibulum et sagittis metus. Curabitur varius mattis nibh porttitor vestibulum. Sed erat tortor,
+                    auctor eget bibendum ut, venenatis sed felis. Vestibulum scelerisque felis id pharetra accumsan.</p>
+
+                    <div class="numBlock">
+                        <div class="countyNum">
+                            <h4 style="color:#7899D4;">868</h4>
+                            <p class="numInfo">counties with less dispensing and less deaths</p>
+                        </div>
+                        <div class="countyNum">
+                            <h4 style="color: #917299">436</h4>
+                            <p class="numInfo">counties with more dispensing but less deaths</p>
+                        </div>
+                        <div class="countyNum">
+                            <h4 style="color: #AA5064">521</h4>
+                            <p class="numInfo">counties with less dispensing but more deaths</p>
+                        </div>
+                        <div class="countyNum">
+                            <h4 style="color: #DA1F2C">968</h4>
+                            <p class="numInfo">counties with more dispensing and more deaths</p>
+                        </div>
+                    </div>
+
+                <p>Praesent tincidunt egestas dui in feugiat. Orci varius natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. In felis mi, varius quis pulvinar et, semper eget mi. Integer in
+                    libero feugiat, rutrum quam nec, ullamcorper tortor. Maecenas faucibus quam et molestie mollis.
+                    Nullam luctus neque a felis auctor, ut eleifend quam scelerisque. Phasellus eleifend erat sit amet
+                    egestas fringilla. Suspendisse eu cursus lectus, sit amet maximus justo. Suspendisse cursus enim vel
+                    elit tristique tincidunt. Aenean ac orci elementum, tincidunt lectus at, sollicitudin ex. Nulla
+                    dignissim sem dui, eu luctus felis egestas in. Sed at tristique risus.</p>
+            </div>
+
+            <div id="map">
+                <div class="flourish-embed flourish-map" data-src="visualisation/13358866"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                <div id="mapChart"></div>
+            </div> <!-- map -->
+
+            <div class="story">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec auctor neque, in pharetra turpis.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis velit vel est aliquam
+                    egestas. Praesent augue risus, facilisis nec feugiat ac, consectetur eu enim. Sed ac mi neque.
+                    Vestibulum et sagittis metus. Curabitur varius mattis nibh porttitor vestibulum. Sed erat tortor,
+                    auctor eget bibendum ut, venenatis sed felis. Vestibulum scelerisque felis id pharetra accumsan.</p>
+
+                <p>Praesent tincidunt egestas dui in feugiat. Orci varius natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. In felis mi, varius quis pulvinar et, semper eget mi. Integer in
+                    libero feugiat, rutrum quam nec, ullamcorper tortor. Maecenas faucibus quam et molestie mollis.
+                    Nullam luctus neque a felis auctor, ut eleifend quam scelerisque. Phasellus eleifend erat sit amet
+                    egestas fringilla. Suspendisse eu cursus lectus, sit amet maximus justo. Suspendisse cursus enim vel
+                    elit tristique tincidunt. Aenean ac orci elementum, tincidunt lectus at, sollicitudin ex. Nulla
+                    dignissim sem dui, eu luctus felis egestas in. Sed at tristique risus.</p>
+                    
+                    <div class="statBlock">
+                        <div class="stat">
+                            <h4>XX%</h4>
+                            <p class="statInfo">This is what the stat is about</p>
+                        </div>
+                        <div class="stat">
+                            <h4>XX%</h4>
+                            <p class="statInfo">This is what the stat is about</p>
+                        </div>
+                        <div class="stat">
+                            <h4>XX%</h4>
+                            <p class="statInfo">This is what the stat is about</p>
+                        </div>
+                    </div>
+
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec auctor neque, in pharetra turpis.
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis velit vel est aliquam
+                        egestas. Praesent augue risus, facilisis nec feugiat ac, consectetur eu enim. Sed ac mi neque.
+                        Vestibulum et sagittis metus. Curabitur varius mattis nibh porttitor vestibulum. Sed erat tortor,
+                        auctor eget bibendum ut, venenatis sed felis. Vestibulum scelerisque felis id pharetra accumsan.</p>
+    
+                    <p>Praesent tincidunt egestas dui in feugiat. Orci varius natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. In felis mi, varius quis pulvinar et, semper eget mi. Integer in
+                        libero feugiat, rutrum quam nec, ullamcorper tortor. Maecenas faucibus quam et molestie mollis.
+                        Nullam luctus neque a felis auctor, ut eleifend quam scelerisque. Phasellus eleifend erat sit amet
+                        egestas fringilla. Suspendisse eu cursus lectus, sit amet maximus justo. Suspendisse cursus enim vel
+                        elit tristique tincidunt. Aenean ac orci elementum, tincidunt lectus at, sollicitudin ex. Nulla
+                        dignissim sem dui, eu luctus felis egestas in. Sed at tristique risus.</p>
+            
+                </div>
+
+        </div> <!-- content -->
+
+
+        <script src="./infoscripts.js"></script>
+    </body>
+
+    </html>

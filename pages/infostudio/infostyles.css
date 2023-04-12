@@ -1,0 +1,143 @@
+/* 
+COLOR PALETTE
+Dark Purple: #2B2D42
+Bright Red: #DA1F2C 
+Light Blue: #7899D4
+Blue-Purple: #917299
+Red-Purple: #AA5064
+*/
+
+
+/* OVERALL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(#2b2d42, #74303b, #2b2d42);
+    /* background-color: #2B2D42; */
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+p {
+    font-size: .8em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#title {
+    padding: 10% 30% 0% 30%;
+    flex: 100%;
+    text-align: center;
+}
+
+.story {
+    flex: 100%;
+    padding: 5% 25% 5% 25%;
+}
+
+/* STATS AND KEY */
+
+.statBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+    margin: 5% 0% 5% 0%;
+}
+
+.stat {
+    flex: 30%;
+}
+
+h4 {
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 700;
+    margin: 0px;
+    color: #da1f2c;
+}
+
+.statInfo {
+    text-align: center;
+    margin: 0px;
+    font-style: italic;
+    flex: 30%;
+}
+
+#key {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0% 2.5% 0% 2.5%;
+    gap: 2.5%;
+    border: 1px solid white ;
+    border-radius: 20px;
+    padding: 2.5%;
+}
+
+.keyItem {
+    flex: 21.875%;
+    /* padding: 2.5%; */
+    /* border: 1px solid white ;
+    border-radius: 20px; */
+}
+
+.numBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin: 5% 0% 5% 0%;
+    padding: 0% 10% 0% 10%;
+}
+
+.countyNum {
+    flex: 45%;
+}
+
+.numInfo {
+    text-align: center;
+    margin: 0px;
+    font-style: italic;
+    flex: 45%;
+}
+
+/* SCATTERPLOT */
+
+#scatterplot {
+    flex: 100%;
+    margin: 0% 5% 0% 5%;
+}
+
+.axisLabel {
+    fill: white;
+}
+
+/* MAP */
+
+#map {
+    flex: 100%;
+    height: 90vh;
+    margin: 0% 5% 3% 5%;
+}
