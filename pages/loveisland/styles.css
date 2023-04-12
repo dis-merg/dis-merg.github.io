@@ -162,9 +162,18 @@ button:hover {
     width: 100%;
 }
 
+#region {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flourish-text {
+    flex: 40%;
+}
+
 .flourish-map {
     margin: 0px;
-    flex: 50%;
+    flex: 60%;
 }
 
 .jobaxisLabel {
