@@ -30,6 +30,8 @@ Promise.all([
 
     d3.selectAll(".select").on("click", function() {
         var gender = d3.selectAll(".select").property("id");
+        console.log(gender)
+        
         if (gender === "female") {
             chartA.update(filtered_Women_A, "female");
             chartB.update(filtered_Women_B, "female");
@@ -38,7 +40,6 @@ Promise.all([
             chartB.update(filtered_Men_B, "male");
         }
     })
-
 });
 
 
@@ -255,17 +256,18 @@ function chartB(data, gender) {
 /////////////// PROFESSION CHART
 
 // set the dimensions and margins of the graph
-var jobwidth = window.innerWidth - margin.left - margin.right - 200;
-var jobheight = 350 - margin.top - margin.bottom;
+const jobmargin = {top: 40, left: 130, right: 20, bottom: 70};
+var jobwidth = window.innerWidth - jobmargin.left - jobmargin.right - 200;
+var jobheight = 350 - jobmargin.top - jobmargin.bottom;
+
 
 // append the svg object to the body of the page
-var svg = d3.select("#jobChart")
-  .append("svg")
-    .attr("width", jobwidth + margin.left + margin.right)
-    .attr("height", jobheight + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+var jobsvg = d3.select("#jobChart")
+    .append("svg")
+        .attr("width", jobwidth + jobmargin.left + jobmargin.right)
+        .attr("height", jobheight + jobmargin.top + jobmargin.bottom)
+    .append("g")
+        .attr("transform", "translate(" + jobmargin.left + "," + jobmargin.top + ")");
 
 d3.csv("./data/LoveIsland_Jobs.csv").then(function(data) {
 
@@ -282,25 +284,27 @@ d3.csv("./data/LoveIsland_Jobs.csv").then(function(data) {
     
     // AXIS
     
-    var x = d3.scaleLinear()
-    .domain([0, 10])
-    .range([0, jobwidth]);
-    svg.append("g")
-    .attr("transform", "translate(0," + jobheight + ")")
-    .call(d3.axisBottom(x))
-    .selectAll("text")
-        .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end");
+        let x = d3.scaleLinear()
+        .domain([0, 10])
+        .range([0, jobwidth]);
+        
+        let jobxAxis = jobsvg.append("g")
+        .attr("transform", "translate(0," + jobheight + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+            .style("text-anchor", "end");
+            
     
-        var y = d3.scaleBand()
+        let y = d3.scaleBand()
         .range([0, jobheight ])
-        .domain(data.map(function(d) { return d.profession; }))
+        .domain(filtered_Women.map(function(d) { return d.profession; }))
         .padding(.1);
-        svg.append("g")
+        
+        let jobyAxis = jobsvg.append("g")
         .call(d3.axisLeft(y))
 
-        svg.selectAll("myRect")
-        .data(data)
+        jobsvg.selectAll("rect")
+        .data(filtered_Women)
         .enter()
         .append("rect")
         .attr("x", x(0) )
@@ -310,102 +314,113 @@ d3.csv("./data/LoveIsland_Jobs.csv").then(function(data) {
         .attr("fill", "#9E0059")
 
 
-    // const xAxisLabel = svg.append("text")
-    //     .attr("class","axisLabel")
-    //     .attr("x", width/2)
-    //     .attr("y", height-margin.bottom/2)
-    //     .attr("text-anchor","middle")
-    //     .text("Age");
+    let jobxAxisLabel = jobsvg.append("text")
+        .attr("class","jobaxisLabel")
+        .attr("x", jobwidth/2)
+        // .attr("y", jobheight-jobmargin.bottom/4)
+        .attr("y", jobheight*1.2)
+        .attr("text-anchor","middle")
+        .text("Age");
     
-    // const yAxisLabel = svg.append("text")
-    //     .attr("class","axisLabel")
-    //     // .attr("transform","rotate(-90)")
-    //     // .attr("x",-height/2)
-    //     // .attr("y",margin.left/2)
-    //     .attr("text-anchor","middle")
-    //     .text("Number of Top Contestants");
+    let jobyAxisLabel = jobsvg.append("text")
+        .attr("class","jobaxisLabel")
+        .attr("transform","rotate(-90)")
+        .attr("x", -jobheight/2)
+        .attr("y", -jobmargin.left/1.1)
+        .attr("text-anchor","middle")
+        .text("Number of Top Contestants");
     
     
     // BUTTON CLICK
     
-    // d3.select("#maleAgeRace").on("click", function() {
+    d3.select("#maleJob").on("click", function() {
     
-    //     xScale.domain(filtered_Men.map(function(d) { return d.age; }));
+    y = d3.scaleBand()
+        .range([0, jobheight ])
+        .domain(filtered_Men.map(function(d) { return d.profession; }))
+        .padding(.1);
+
+    jobyAxis.call(d3.axisLeft().scale(y))
+
+    jobxAxisLabel = jobsvg.append("text")
+        .attr("class","jobaxisLabel")
+        .attr("x", jobwidth/2)
+        // .attr("y", jobheight-jobmargin.bottom/4)
+        .attr("y", jobheight*1.2)
+        .attr("text-anchor","middle")
+        .text("Age");
     
-    //     let b = svg.selectAll("rect")
-    //     .data(filtered_Men, function(d) { return d.age; });
-    
-    //     b.enter().append("rect")
-    //     .attr("x", function(d) { return xScale(d.age); })
-    //     .attr("y", function(d) { return yScale(d.total); })
-    //     .attr("width", xScale.bandwidth())
-    //     .attr("height", function(d) { return height - margin.bottom - yScale(d.total); })
-    //     .attr("opacity", 0)
-    //     .attr("fill","#FFBD00")
-    //     .merge(b)   
-    //         .transition() 
-    //         .duration(1500)
-    //         .attr("x", function(d) { return xScale(d.age); })
-    //         .attr("y", function(d) { return yScale(d.total); })
-    //         .attr("width", xScale.bandwidth())
-    //         .attr("height", function(d) { return height - margin.bottom - yScale(d.total); })
-    //         .attr("opacity", 1)
-    //         .attr("fill","#FFBD00");
-    
-    //     b.exit()
-    //         .transition()
-    //         .duration(1500)
-    //         .attr("opacity",0)
-    //         .remove();
-    
-    //     xAxis.transition()
-    //         .duration(1500)
-    //         .call(d3.axisBottom().scale(xScale));
-    
-    //     yAxis.transition()
-    //         .duration(1500)
-    //         .call(d3.axisLeft().scale(yScale).ticks(5));
-    
-    // });
-    
-    
-    // d3.select("#femaleAgeRace").on("click", function() {
-    
-    //     xScale.domain(filtered_Women.map(function(d) { return d.age; }));
-    
-    //     let b = svg.selectAll("rect")
-    //     .data(filtered_Women, function(d) { return d.age; });
-    
-    //     b.enter().append("rect")
-    //     .attr("x", function(d) { return xScale(d.age); })
-    //     .attr("y", function(d) { return yScale(d.total); })
-    //     .attr("width", xScale.bandwidth())
-    //     .attr("height", function(d) { return height - margin.bottom - yScale(d.total); })
-    //     .attr("opacity", 0)
-    //     .attr("fill","#FF0054")
-    //     .merge(b)   
-    //         .transition() 
-    //         .duration(1500)
-    //         .attr("x", function(d) { return xScale(d.age); })
-    //         .attr("y", function(d) { return yScale(d.total); })
-    //         .attr("width", xScale.bandwidth())
-    //         .attr("height", function(d) { return height - margin.bottom - yScale(d.total); })
-    //         .attr("opacity", 1)
-    //         .attr("fill","#FF0054");
-    
-    //     b.exit()
-    //         .transition()
-    //         .duration(1500)
-    //         .attr("opacity",0)
-    //         .remove();
-    
-    //     xAxis.transition()
-    //         .duration(1500)
-    //         .call(d3.axisBottom().scale(xScale));
-    
-    //     yAxis.transition()
-    //         .duration(1500)
-    //         .call(d3.axisLeft().scale(yScale).ticks(5));
-    // });
+    jobyAxisLabel = jobsvg.append("text")
+        .attr("class","jobaxisLabel")
+        .attr("transform","rotate(-90)")
+        .attr("x", -jobheight/2)
+        .attr("y", -jobmargin.left/1.1)
+        .attr("text-anchor","middle")
+        .text("Number of Top Contestants");
+
+        
+
+    let b = jobsvg.selectAll("rect")
+        .data(filtered_Men);
+
+    b.enter().append("rect")
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.profession); })
+        .attr("width", 0)
+        .attr("height", y.bandwidth() )
+        .attr("fill", "#FFBD00")
+    .merge(b)   
+        .transition() // a transition makes the changes visible...
+        .duration(1500)
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.profession); })
+        .attr("width", function(d) { return x(d.total); })
+        .attr("height", y.bandwidth() )
+        .attr("fill", "#FFBD00");
+
+    b.exit()
+        .transition()
+        .duration(1500)
+        .attr("width",0)
+        .remove();
+
+
+
+
     
     });
+    
+    d3.select("#femaleJob").on("click", function() {
+
+    y = d3.scaleBand()
+        .range([0, jobheight ])
+        .domain(filtered_Women.map(function(d) { return d.profession; }))
+        .padding(.1);
+
+    jobyAxis.call(d3.axisLeft().scale(y));
+
+    let b = jobsvg.selectAll("rect")
+        .data(filtered_Women);
+
+    b.enter().append("rect")
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.profession); })
+        .attr("width", 0)
+        .attr("height", y.bandwidth() )
+        .attr("fill", "#9e0059")
+    .merge(b)   
+        .transition() // a transition makes the changes visible...
+        .duration(1500)
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.profession); })
+        .attr("width", function(d) { return x(d.total); })
+        .attr("height", y.bandwidth() )
+        .attr("fill", "#9e0059");
+
+    b.exit()
+        .transition()
+        .duration(1500)
+        .attr("width",0)
+        .remove();
+    
+    })});
