@@ -28,18 +28,17 @@ Promise.all([
     chartA(filtered_Women_A, "female");
     chartB(filtered_Women_B, "female");
 
-    d3.selectAll(".select").on("click", function() {
-        var gender = d3.selectAll(".select").property("id");
-        console.log(gender)
-        
-        if (gender === "female") {
-            chartA.update(filtered_Women_A, "female");
-            chartB.update(filtered_Women_B, "female");
-        } else {
-            chartA.update(filtered_Men_A, "male");
-            chartB.update(filtered_Men_B, "male");
-        }
-    })
+    document.querySelector('#femaleButton').addEventListener('click', function(){
+        chartA.update(filtered_Women_A, "female");
+        chartB.update(filtered_Women_B, "female");
+
+    });
+
+    document.querySelector('#maleButton').addEventListener('click', function(){
+        chartA.update(filtered_Men_A, "male");
+        chartB.update(filtered_Men_B, "male");
+
+    });
 });
 
 
