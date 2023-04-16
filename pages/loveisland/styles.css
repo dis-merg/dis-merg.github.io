@@ -40,11 +40,12 @@ body {
 }
 
 .text {
-    flex: 50%;
+    flex: 40%;
+    align-self: center;
 }
 
 .vis {
-    flex: 50%;
+    flex: 40%;
 }
 
 #landing{
@@ -56,6 +57,17 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100%;
 }
+
+#intro {
+    background-color: #FFBD00;
+    color: #390099;
+    background-image: url("./img/loveisland.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+    display: flex;
+}
+
 
 #ageRace{
     background-color: #390099 ;
@@ -79,8 +91,17 @@ body {
 }
 
 #conclusion{
+    height: 100vh;
     background-color: #FFBD00;
     color: #390099;
+    background-image: url("./img/KatieJosh.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.conclusion {
+    flex: 60%;
 }
 
 /* OVERALL STYLES */
@@ -139,24 +160,6 @@ button:hover {
 .axisLabel {
     fill: white;
 }
-
-/* AGE RACE */
-
-/* .doubleVis {
-    flex: 40%;
-} */
-
-/* #ageChart {
-    width: 100%;
-    height: 70vh;
-    position: relative;
-} */
-
-/* #raceChart {
-    width: 100%;
-    height: 70vh;
-    position: relative;
-} */
 
 #jobChart {
     width: 100%;

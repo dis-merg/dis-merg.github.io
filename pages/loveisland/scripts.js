@@ -256,7 +256,7 @@ function chartB(data, gender) {
 
 // set the dimensions and margins of the graph
 const jobmargin = {top: 40, left: 130, right: 20, bottom: 70};
-var jobwidth = window.innerWidth - jobmargin.left - jobmargin.right - 200;
+var jobwidth = window.innerWidth - jobmargin.left*3 - jobmargin.right;
 var jobheight = 350 - jobmargin.top - jobmargin.bottom;
 
 

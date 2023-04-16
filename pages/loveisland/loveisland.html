@@ -21,25 +21,29 @@
             <div id="landing" class="full-vh container">
                 <div class="text"> 
                     <h1>Who wins Love Island?</h1>
-                    <p>In order to answer the question of “what kind of person is most likely to win Love Island?” I'm
-                        using a data set I compiled about contestants on the show for seasons 1-8. Love Island is a
-                        popular reality show where male and female contestants live in a villa together trying to find
-                        love. Contestants are added and eliminated throughout the season, sometimes by the choice of the
-                        other Islanders, the public, or the producers. The last 4 couples go to the finale where the
-                        public votes for their favorite couple, awarding them $25k each. The variables I'm focusing on
-                        in my dataset are:</p>
-                        <ul>
-                            <li>Name</li>
-                            <li>Age</li>
-                            <li>Gender</li>
-                            <li>Race</li>
-                            <li>Profession</li>
-                            <li>Region of England</li>
-                            <li>Outcome (winner, runner-up, dumped, etc.)</li>
-                        </ul>
-                    </div>
-
+                    <p style="font-style:italic; font-size: 10px;">Pictured: Davide and Ekin-Su, Season 8 winners.</p>
+                </div>
                 <div class="vis">
+                </div>
+            </div>
+
+            <div id="intro" class="full-vh">
+                <div class="vis"><p> </p></div>
+                <div class="conclusion">
+                    <h2>The UKs Popularity Contest</h2>
+                    <p>Love Island is a popular reality dating show in the UK about male and female contestants living in a villa together trying to find love.</p>
+                    <p>Contestants are added and eliminated throughout the season based on popularity&#8212; most often by not being picked by someone of the opposite gender, sometimes by a public vote, and sometimes by a vote within the villa. At the end of the show, four couples go to the finale where the public votes for their favorite, awarding the winners $25k each. Given that this show is essentially a popularity contest, I want to answer the question, “What kind of person is most likely to win Love Island?” I think it will give interesting insight into what people in the UK find desirable.</p>
+                    <p>To answer this question, I compiled a dataset about all of the contestants on the show for seasons 1-8, and then filtered it to only contestants that placed in the top four couples of their season. The variables I'm focusing on in my dataset are:</p>
+                    <ul>
+                        <li>Name</li>
+                        <li>Age</li>
+                        <li>Gender</li>
+                        <li>Race</li>
+                        <li>Profession</li>
+                        <li>Region of the UK</li>
+                        <li>Outcome (winner, runner-up, dumped, etc.)</li>
+                    </ul>
+                    <p>The characteristics I will be analyzing are age, race, region of the UK, and profession. For each of these aspects, I will look at male and female contestants separately. Given that the show only has cisgendered, straight contestants, there will likely be differences in what makes men vs. women popular. </p>
                 </div>
             </div>
 
@@ -49,33 +53,23 @@
                         <button button type="submit" id="femaleButton" value="female">Female Contestants</button>
                         <button button type="submit" id="maleButton" value="male">Male Contestants</button>
                     </div>
-                <p>You mean it ain't me noggin' Dalek and thus lost the plot copped a bollocking lost her marbles bits
-                    'n bobs Sherlock queer as a clockwork orange a diamond geezer through the dales, marmite a fiver you
-                    mean it ain't me noggin' pork scratchings up the duff red telephone box pulled out the eating irons
-                    Queen Elizabeth. Wibbly-wobbly timey-wimey stuff it's cracking flags scouser had a barney with the
-                    inlaws it's me peepers well chuffed stiff upper lip middle class, scrubber Weeping Angels a comely
-                    wench cobbles her Majesty's pleasure jammy git, one off punter stop arsing around and thus
-                    absobloodylootely throw a paddy. </p>
+                <p>Two fundamental characteristics to consider when figuring out who is likely to win Love Island are age and race. Overall, contestants on the show are primarily in their twenties, with occasional islanders one or two years outside of that in either direction.</p>
+                <p>Among top female contestants, there is a pretty normal distribution, with the exception of two spikes at ages 20 and 26, and a noticable dip at age 23. Given that the two spikes are quite far from each other with an otherwise normal distribution, it isn't clear from this sample if age has relevance to winning the show, or if age isn't a big factor.</p>
+                <p>However, just like women, men also have a spike at age 20. The overall distribution of men skews towards the late 20s, so it's surprising that they have a spike at 20 like women do. Because of this, I am going to propose that contestants at age 20 are most likely to do well at the show.</p>
                 <div class="container">
                     <div id="charts">
                     </div>
                 </div>
+                <p>As for race, white contestants are strongly favored for both men and women. Men are more likely to have non-white contestants in the finale, but almost all women that make it that far are white.</p>
             </div>
 
             <div id="region" class="full-vh container">
                 <div class="flourish-text">
                     <h2 class="nobuttons">Region</h2>
-                    <p>You mean it ain't me noggin' Dalek and thus lost the plot copped a bollocking lost her marbles bits
-                        'n bobs Sherlock queer as a clockwork orange a diamond geezer through the dales, marmite a fiver you
-                        mean it ain't me noggin' pork scratchings up the duff red telephone box pulled out the eating irons
-                        Queen Elizabeth. Wibbly-wobbly timey-wimey stuff it's cracking flags scouser had a barney with the
-                        inlaws it's me peepers well chuffed stiff upper lip middle class, scrubber Weeping Angels a comely
-                        wench cobbles her Majesty's pleasure jammy git, one off punter stop arsing around and thus
-                        absobloodylootely throw a paddy. </p>
+                    <p>Like age and race, region of the UK is similar for both men and women. The East of England region is the most popular for both, followed by the Northwest. One might think that it must mean there are just more people from East of England, but it is actually the third most populous region, after London and Northwest of England.</p>
+                    <p>East of England has some well-known counties like Essex, Cambridgeshire, Norfolk, and Suffolk. Essex is known for having "reality-TV-types," shown in the popular show The Only Way is Essex, which has been running for 29 seasons. </p>
                 </div>
-                <div class="flourish-embed flourish-map vis" data-src="visualisation/13232231"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-                <!-- <div class="flourish-embed flourish-map" data-src="visualisation/13382706"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
-                <!-- <div class="flourish-embed flourish-map" data-src="visualisation/13382715"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
+                <div class="flourish-embed flourish-map" data-src="visualisation/13232231" data-width="100%"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
             </div>
 
             <div id="profession" class="full-vh">
@@ -84,27 +78,20 @@
                     <button id="femaleJob">Female Contestants</button>
                     <button id="maleJob">Male Contestants</button>
                 </div>
-                <p>You mean it ain't me noggin' Dalek and thus lost the plot copped a bollocking lost her marbles bits
-                    'n bobs Sherlock queer as a clockwork orange a diamond geezer through the dales, marmite a fiver you
-                    mean it ain't me noggin' pork scratchings up the duff red telephone box pulled out the eating irons
-                    Queen Elizabeth. Wibbly-wobbly timey-wimey stuff it's cracking flags scouser had a barney with the
-                    inlaws it's me peepers well chuffed stiff upper lip middle class, scrubber Weeping Angels a comely
-                    wench cobbles her Majesty's pleasure jammy git, one off punter stop arsing around and thus
-                    absobloodylootely throw a paddy. </p>
+                <p>The profession is where we really start to see differences between men and women. The top jobs for women are model and entertainer, while the top jobs for men are tradesperson and professional athlete. This makes sense, because in society women are often celebrated for their looks, while men are celebrated for physical, "manly" characteritstics. </p>
                     <div class="container">
                         <div id="jobChart"></div>
                     </div>
             </div>
 
-            <div id="conclusion" class="full-vh">
-                <h2>Conclusion</h2>
-                <p>You mean it ain't me noggin' Dalek and thus lost the plot copped a bollocking lost her marbles bits
-                    'n bobs Sherlock queer as a clockwork orange a diamond geezer through the dales, marmite a fiver you
-                    mean it ain't me noggin' pork scratchings up the duff red telephone box pulled out the eating irons
-                    Queen Elizabeth. Wibbly-wobbly timey-wimey stuff it's cracking flags scouser had a barney with the
-                    inlaws it's me peepers well chuffed stiff upper lip middle class, scrubber Weeping Angels a comely
-                    wench cobbles her Majesty's pleasure jammy git, one off punter stop arsing around and thus
-                    absobloodylootely throw a paddy. </p>
+            <div id="conclusion" class="full-vh container">
+                <div class="conclusion">
+                    <h2 class="nobuttons">Conclusion</h2>
+                    <p>According to these analyses, the woman most likely to win Love Island would be a 20 year old, white model from East of England. The man most likely to win Love Island would be a 20 year old, white tradesperson from East of England.</p>
+                    <p>Interestingly, neither of these hypothetical people have ever entered the show.</p>
+                    <p>The closest contestants to these characteristics are Katie Salmon, a 20 year old model from Northwest England and Josh Ritchie, a 20 year old tradesperson from Northwest England. I was surprised but excited to see that they both placed in the top four of their seasons (season 1 for Josh and season 2 for Katie)!</p>
+                </div>
+                <div class="vis"></div>
             </div>
 
         </div>
