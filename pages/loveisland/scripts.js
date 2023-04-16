@@ -12,7 +12,7 @@ Promise.all([
     let filtered_Women_A = files[0].filter(function(d) {
         return d.gender == "female";
     });
-    
+
     let filtered_Men_A = files[0].filter(function(d) {
         return d.gender == "male";
     });
@@ -20,7 +20,7 @@ Promise.all([
     let filtered_Women_B = files[1].filter(function(d) {
         return d.gender == "female";
     });
-    
+
     let filtered_Men_B = files[1].filter(function(d) {
         return d.gender == "male";
     });
@@ -46,8 +46,17 @@ Promise.all([
 
 function chartA(data, gender) {
 
-    var width = document.querySelector("#ageRace").clientWidth / 2 - (margin.left + margin.right);
+
+    var width = document.querySelector("#ageRace").clientWidth / 2.5 - (margin.left + margin.right);
     var height = 500 - (margin.top + margin.bottom);
+
+    if(window.innerWidth <= 990){
+        width = document.querySelector("#ageRace").clientWidth / 1.33 - (margin.left + margin.right);
+    }
+
+    if(window.innerWidth <= 550){
+        width = document.querySelector("#ageRace").clientWidth / 1.2 - (margin.left + margin.right);
+    }
 
     // var width = document.querySelector("#ageRace").clientWidth / 2;
     // var height = document.querySelector("#ageRace").clientHeight;
@@ -149,8 +158,16 @@ function chartA(data, gender) {
 
 function chartB(data, gender) {
 
-    var width = document.querySelector("#ageRace").clientWidth / 2 - (margin.left + margin.right);
+    var width = document.querySelector("#ageRace").clientWidth / 2.5 - (margin.left + margin.right);
     var height = 500 - (margin.top + margin.bottom);
+
+    if(window.innerWidth <= 990){
+        width = document.querySelector("#ageRace").clientWidth / 1.33 - (margin.left + margin.right);
+    }
+
+    if(window.innerWidth <= 550){
+        width = document.querySelector("#ageRace").clientWidth / 1.2 - (margin.left + margin.right);
+    }
 
     // var width = document.querySelector("#ageRace").clientWidth / 2;
     // var height = document.querySelector("#ageRace").clientHeight;
@@ -256,8 +273,8 @@ function chartB(data, gender) {
 
 // set the dimensions and margins of the graph
 const jobmargin = {top: 40, left: 130, right: 20, bottom: 70};
-var jobwidth = window.innerWidth - jobmargin.left*3 - jobmargin.right;
-var jobheight = 350 - jobmargin.top - jobmargin.bottom;
+var jobwidth = window.innerWidth*.6 - jobmargin.left - jobmargin.right;
+var jobheight = 350 - jobmargin.top - jobmargin.bottom; 
 
 
 // append the svg object to the body of the page
@@ -423,3 +440,4 @@ d3.csv("./data/LoveIsland_Jobs.csv").then(function(data) {
         .remove();
     
     })});
+
